@@ -42,7 +42,7 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 | Cam 3 | 47 |  
 | Total | 153 | 
 
-## Object Detection
+## Pedestrian Detection
 
 ### Pretrained Models & Comparison
 
@@ -88,7 +88,7 @@ python train.py --batch-size 8 --img 640 640 --data pedestrian.yaml --cfg cfg/yo
 # yolor_p6
 python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --device 0 --name yolor_p6_pedestrian --hyp hyp.scratch.1280.yaml --epochs 300
 ```
-## ReID
+## Person ReID
 ### Pretrained Models & Comparison
 
 | Model | Rank@1 | mAP | weights |
