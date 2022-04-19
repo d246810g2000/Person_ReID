@@ -6,7 +6,6 @@
 2. 在遊樂園上可以幫助家長尋找走失的小朋友。
 3. 在商場上可以配合推薦系統搭建出個性化的推薦服務。
 4. 在相簿中可以將同一個人的照片分類在一起，方便管理。
-<img width="965" alt="image" src="https://user-images.githubusercontent.com/41776044/163923350-15b36f39-5434-4ac9-b4a4-b82735b30466.png">
 
 
 ## Training
