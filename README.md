@@ -14,8 +14,9 @@
 
 ## Datasets
 這個資料集是在中國清華大學中收集得來的，包含 6 個攝影機，其中 5 個高清 (1920×1080)、1 個低清 (720 × 576)。
-
+<div style="text-align: center">
 <img width="720" alt="image" src="https://user-images.githubusercontent.com/41776044/163923694-08d4d75f-c59d-4212-a704-299612f749ed.png">
+</div>
 
 - Training data
 Cam 4, Cam 5, Cam 6 為訓練資料，共有 723 張影像，其中包含 100 個不同的人，共有 1438 個行人框 (ReID Bbox)。
