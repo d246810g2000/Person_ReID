@@ -23,7 +23,7 @@ Cam 4, Cam 5, Cam 6 為訓練資料，共有 723 張影像，其中包含 100 �
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/41776044/163923758-03b30bc5-ad16-4e0e-b227-b1cbc857be33.png">
 
 |     | Frame | ReID Bbox |
-| :-- | :-- | :-: |
+| --- | --- | --- |
 | Cam 4 | 62 | 87 | 
 | Cam 5 | 190 | 431 | 
 | Cam 6 | 471 | 920 | 
