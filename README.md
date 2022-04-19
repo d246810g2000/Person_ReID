@@ -42,7 +42,7 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 | Cam 3 | 47 |  
 | Total | 153 | 
 
-## Pretrained Models & Comparison
+## Object Detection Pretrained Models & Comparison
 
 | Model | Test Size | AP<sup>val</sup> | AP<sub>50</sub><sup>val</sup> | AP<sub>75</sub><sup>val</sup> | AP<sub>S</sub><sup>val</sup> | AP<sub>M</sub><sup>val</sup> | AP<sub>L</sub><sup>val</sup> | weights |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | 
@@ -88,4 +88,8 @@ python train.py --batch-size 8 --img 640 640 --data pedestrian.yaml --cfg cfg/yo
 
 ## Inference
 
-
+## Reference
+- [WongKinYiu/PyTorch_YOLOv4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
+- [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
+- [WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
+- [layumi/Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
