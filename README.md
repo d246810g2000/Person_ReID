@@ -7,6 +7,10 @@
 3. 在商場上可以配合推薦系統搭建出個性化的推薦服務。
 4. 在相簿中可以將同一個人的照片分類在一起，方便管理。
 
+## Target
+我們希望能在校園中找到相應的人，但是由於攝影機的解析度等硬體缺陷很難得到清晰的人臉，因此人臉辨識技術不太適用於此場景，我們需要使用 ReID (Re-identification) 技術來解決此問題。
+<img width="2466" alt="image" src="https://user-images.githubusercontent.com/41776044/163923524-c4507ade-7ba7-40a3-a78c-f6826ffb4fc7.png">
+
 
 ## Training
 
