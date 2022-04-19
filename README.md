@@ -14,9 +14,10 @@
 
 ## Datasets
 這個資料集是在中國清華大學中收集得來的，包含 6 個攝影機，其中 5 個高清 (1920×1080)、1 個低清 (720 × 576)。
+
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/41776044/163923694-08d4d75f-c59d-4212-a704-299612f749ed.png">
 
-- Training data
+### Training data
 Cam 4, Cam 5, Cam 6 為訓練資料，共有 723 張影像，其中包含 100 個不同的人，共有 1438 個行人框 (ReID Bbox)。
 
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/41776044/163923758-03b30bc5-ad16-4e0e-b227-b1cbc857be33.png">
@@ -28,7 +29,7 @@ Cam 4, Cam 5, Cam 6 為訓練資料，共有 723 張影像，其中包含 100 �
 | Cam 6 | 471 | 920 | 
 | Total | 723 | 1438 | 
 
-- Testing data
+### Testing data
 Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行人，並知道是 100 個人中的哪一個人。
 
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/41776044/163923784-b787d751-d14f-49ca-b0c3-81315805cf14.png">
