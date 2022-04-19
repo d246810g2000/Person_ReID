@@ -118,6 +118,18 @@ python train.py --name PCB --PCB --train_all --lr 0.02
 python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle --warm_epoch 5; python test.py --name swin_p0.5_circle_w5
 ```
 
+## Pedestrian Detection + Person ReID
+
+| Detection Model | ReID Model | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> |
+| :-- | :-: | :-: | :-: | :-: |
+| YOLOR-CSP | ResNet-50 (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
+| YOLOR-CSP | PCB | 79.84% | 79.84% | 79.84% |
+| YOLOR-CSP | Swin (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
+| YOLOR-P6 | ResNet-50 (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
+| YOLOR-P6 | PCB | 79.84% | 79.84% | 79.84% | 
+| YOLOR-P6 | Swin (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
+
+
 ## Reference
 - [WongKinYiu/PyTorch_YOLOv4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
 - [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
