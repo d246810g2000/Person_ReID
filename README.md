@@ -77,13 +77,13 @@ python train.py --batch-size 8 --img 640 640 --data pedestrian.yaml --cfg cfg/yo
 
 - YOLOR:
 
-yolor_csp
 ```
+# yolor_csp
 python train.py --batch-size 8 --img 640 640 --data pedestrian.yaml --cfg cfg/yolor_csp_pedestrian.cfg --weights 'yolor_csp.pt' --device 0 --name yolor_csp_pedestrian --hyp hyp.scratch.640.yaml --epochs 300 --multi-scale
 ```
 
-yolor_p6
 ```
+# yolor_p6
 python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --device 0 --name yolor_p6_pedestrian --hyp hyp.scratch.1280.yaml --epochs 300
 ```
 
