@@ -93,17 +93,10 @@ python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/
 
 | Model | Rank@1 | mAP | weights |
 | :-- | :-: | :-: | :-: | 
-| ResNet-50 (all tricks+Circle) | 92.13% | 79.84% | [resnet50.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/resnet50.pth) | 
 | PCB | 92.64% | 77.47% | [pcb.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/pcb.pth) | 
 | Swin (all tricks+Circle) | 93.65% | 83.65% | [swin.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/swin.pth) | 
 
 ### Training
-- ResNet-50
-
-```
-# all tricks+Circle
-python train.py --warm_epoch 5 --stride 1 --erasing_p 0.5 --batchsize 8 --lr 0.02 --name warm5_s1_b8_lr2_p0.5_circle --circle
-```
 
 - PCB
 
@@ -120,14 +113,17 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 
 ## Pedestrian Detection + Person ReID
 
-| Detection Model | ReID Model | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> |
-| :-- | :-: | :-: | :-: | :-: |
-| YOLOR-CSP | ResNet-50 (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
-| YOLOR-CSP | PCB | 79.84% | 79.84% | 79.84% |
-| YOLOR-CSP | Swin (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
-| YOLOR-P6 | ResNet-50 (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
-| YOLOR-P6 | PCB | 79.84% | 79.84% | 79.84% | 
-| YOLOR-P6 | Swin (all tricks+Circle) | 79.84% | 79.84% | 79.84% |
+| Detection Model | ReID Model | Dataset | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> |
+| :-- | :-: | :-: | :-: | :-: | :-: | :-: |
+| YOLOv4 | ResNet-50 (Cosine) | Own Dataset | 416 | 58.61% | 70.39% | 64.48% |
+| YOLOv4 | PCB | Market1501 | 416 | 66.64% | 83.13% | 73.84% |
+| YOLOv4 | Swin (all tricks+Circle) | Market1501 | 416 | 66.28% | 83.37% | 73.12% |
+| YOLOR-CSP | ResNet-50 (Cosine) | Own Dataset | 640 | 62.04% | 72.47% | 69.45% |
+| YOLOR-CSP | PCB | Market1501 | 640 | 74.39% | 89.57% | 83.79% |
+| YOLOR-CSP | Swin (all tricks+Circle) | Market1501 | 640 | 74.10% | 88.86% | 83.49% |
+| YOLOR-P6 | ResNet-50 (Cosine) | Own Dataset | 1280 | 79.84% | 79.84% | 79.84% |
+| YOLOR-P6 | PCB | Market1501 | 1280 | 79.84% | 79.84% | 79.84% | 
+| YOLOR-P6 | Swin (all tricks+Circle) | Market1501 | 1280 | 79.84% | 79.84% | 79.84% |
 
 
 ## Reference
@@ -135,3 +131,4 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 - [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
 - [WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
 - [layumi/Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
+

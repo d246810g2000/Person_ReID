@@ -1,0 +1,5 @@
+train: yolor/datasets/pedestrian/train/images
+val: yolor/datasets/pedestrian/valid/images
+
+nc: 1
+names: [pedestrian]

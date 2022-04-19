@@ -218,3 +218,16 @@ events.out.tfevents*
 
 # mac
 .DS_Store
+
+# dataset
+person_reid_datasets
+reid
+
+# weights
+runs
+wandb
+weights
+
+# repo
+PyTorchYOLOv4
+yolor
