@@ -93,9 +93,9 @@ python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/
 
 | Model | Rank@1 | mAP | weights |
 | :-- | :-: | :-: | :-: | 
-| ResNet-50 (all tricks+Circle) | 92.13% | 79.84% | [resnet50.pth]() | 
-| PCB | 92.64% | 77.47% | [pcb.pth]() | 
-| Swin (all tricks+Circle) | 93.65% | 83.65% | [swin.pth]() | 
+| ResNet-50 (all tricks+Circle) | 92.13% | 79.84% | [resnet50.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/resnet50.pth) | 
+| PCB | 92.64% | 77.47% | [pcb.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/pcb.pth) | 
+| Swin (all tricks+Circle) | 93.65% | 83.65% | [swin.pth](https://github.com/d246810g2000/Person_ReID/releases/download/v1.0/swin.pth) | 
 
 ### Training
 - ResNet-50
