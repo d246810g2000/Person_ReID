@@ -62,19 +62,19 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 - YOLOv4:
 
 ```
-python PyTorch_YOLOv4/train.py --device 0 --batch-size 4 --img-size 416 --data data/pedestrian.yaml --cfg cfg/yolov4_pedestrian.cfg --weights '' --name $id --epochs 300 --multi-scale
+python PyTorch_YOLOv4/train.py --device 0 --batch-size 4 --img-size 416 --data data/pedestrian.yaml --cfg cfg/yolov4_pedestrian.cfg --weights '' --name yolov4_pedestrian --epochs 300 --multi-scale
 ```
 
 - YOLOR:
 
 ```
 # yolor_csp
-python yolor/train.py --device 0 --batch-size 8 --img 640 640 --data data/pedestrian.yaml --cfg cfg/yolor_csp_pedestrian.cfg --weights 'yolor_csp.pt' --name $id --hyp data/hyp.scratch.640.yaml --epochs 300 --multi-scale
+python yolor/train.py --device 0 --batch-size 8 --img 640 640 --data data/pedestrian.yaml --cfg cfg/yolor_csp_pedestrian.cfg --weights 'yolor_csp.pt' --name yolor_csp_pedestrian --hyp data/hyp.scratch.640.yaml --epochs 300 --multi-scale
 ```
 
 ```
 # yolor_p6
-python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --device 0 --name yolor_p6_pedestrian --hyp data/hyp.scratch.1280.yaml --epochs 300
+python yolor/train.py --device 0 --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --name yolor_p6_pedestrian --hyp data/hyp.scratch.1280.yaml --epochs 300
 ```
 ## Person ReID
 ### Pretrained Models & Comparison
