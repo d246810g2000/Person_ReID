@@ -42,7 +42,9 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 | Cam 3 | 47 |  
 | Total | 153 | 
 
-## Object Detection Pretrained Models & Comparison
+## Object Detection
+
+### Pretrained Models & Comparison
 
 | Model | Test Size | AP<sup>val</sup> | AP<sub>50</sub><sup>val</sup> | AP<sub>75</sub><sup>val</sup> | AP<sub>S</sub><sup>val</sup> | AP<sub>M</sub><sup>val</sup> | AP<sub>L</sub><sup>val</sup> | weights |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | 
@@ -61,7 +63,7 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 | [**YOLOR-D6**](/cfg/yolor_d6) | 1280 | **55.4%** | **73.5%** | **60.6%** | **40.4%** | **60.1%** | **68.7%** | [yolor-d6.pt](https://drive.google.com/file/d/1WX33ymg_XJLUJdoSf5oUYGHAtpSG2gj8/view?usp=sharing) |
 |  |  |  |  |  |  |  |
 
-## Training
+### Training
 
 - YOLOv4:
 
@@ -86,8 +88,35 @@ python train.py --batch-size 8 --img 640 640 --data pedestrian.yaml --cfg cfg/yo
 # yolor_p6
 python train.py --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --device 0 --name yolor_p6_pedestrian --hyp hyp.scratch.1280.yaml --epochs 300
 ```
+## ReID
+### Pretrained Models & Comparison
 
-## Inference
+| Model | Rank@1 | mAP | weights |
+| :-- | :-: | :-: | :-: | 
+| ResNet-50 (all tricks+Circle) | 92.13% | 79.84% | [resnet50.pth]() | 
+| PCB | 92.64% | 77.47% | [pcb.pth]() | 
+| Swin (all tricks+Circle) | 93.65% | 83.65% | [swin.pth]() | 
+
+### Training
+- ResNet-50
+
+```
+# all tricks+Circle
+python train.py --warm_epoch 5 --stride 1 --erasing_p 0.5 --batchsize 8 --lr 0.02 --name warm5_s1_b8_lr2_p0.5_circle --circle
+```
+
+- PCB
+
+```
+python train.py --name PCB --PCB --train_all --lr 0.02
+```
+
+- Swin
+
+```
+# all tricks+Circle
+python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle --warm_epoch 5; python test.py --name swin_p0.5_circle_w5
+```
 
 ## Reference
 - [WongKinYiu/PyTorch_YOLOv4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
