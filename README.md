@@ -153,6 +153,4 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 - [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
 - [WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
 - [layumi/Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
-
-
-
+- [MathGaron/mean_average_precision](https://github.com/MathGaron/mean_average_precision)
