@@ -141,7 +141,7 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 | YOLOv4 | PCB | Market1501 | 416 | 66.64% | 83.13% | 73.84% |
 | YOLOv4 | Swin (all tricks+Circle) | Market1501 | 416 | 66.28% | 83.37% | 73.12% |
 | YOLOR-CSP | ResNet-50 (Cosine) | Own Dataset | 640 | 62.04% | 72.47% | 69.45% |
-| YOLOR-CSP | PCB | Market1501 | 640 | 74.39% | 89.57% | 83.79% |
+| YOLOR-CSP | PCB | Market1501 | 640 | <font color=#FF0000>74.39%</font> | <font color=#FF0000>89.57%</font> | <font color=#FF0000>83.79%</font> |
 | YOLOR-CSP | Swin (all tricks+Circle) | Market1501 | 640 | 74.10% | 88.86% | 83.49% |
 | YOLOR-P6 | ResNet-50 (Cosine) | Own Dataset | 1280 | 60.38% | 69.66% | 65.96% |
 | YOLOR-P6 | PCB | Market1501 | 1280 | 74.17% | 87.52% | 82.12% | 
