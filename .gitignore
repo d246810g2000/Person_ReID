@@ -231,3 +231,6 @@ weights
 # repo
 PyTorch_YOLOv4
 yolor
+
+# output
+inference
