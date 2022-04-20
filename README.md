@@ -57,25 +57,59 @@ Cam 1, Cam 2, Cam 3 為測試資料，共有 153 張影像，需要偵測出行�
 | [**YOLOR-D6**](/cfg/yolor_d6.cfg) | 1280 | **55.4%** | **73.5%** | **60.6%** | **40.4%** | **60.1%** | **68.7%** | [yolor-d6.pt](https://drive.google.com/file/d/1WX33ymg_XJLUJdoSf5oUYGHAtpSG2gj8/view?usp=sharing) |
 |  |  |  |  |  |  |  |
 
-### Training
-
-- YOLOv4:
+### YOLOv4 
+#### Training:
 
 ```
 python PyTorch_YOLOv4/train.py --device 0 --batch-size 4 --img-size 416 --data data/pedestrian.yaml --cfg cfg/yolov4_pedestrian.cfg --weights '' --name yolov4_pedestrian --epochs 300 --multi-scale
 ```
 
-- YOLOR:
+#### Testing:
 
 ```
-# yolor_csp
+python PyTorch_YOLOv4/test.py --img 416 --conf 0.001 --batch 8 --device 0 --data data/pedestrian.yaml --names data/pedestrian.names --cfg cfg/yolov4_pedestrian.cfg --weights weights/yolov4.pt
+```
+
+| Class | Images | Targets | Precision | Recall | mAP@.5 | mAP@.5:.95 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| all | 145 | 269 | 0.829 | 0.967 | 0.971 | 0.711 |
+
+
+### YOLOR_CSP 
+#### Training:
+
+```
 python yolor/train.py --device 0 --batch-size 8 --img 640 640 --data data/pedestrian.yaml --cfg cfg/yolor_csp_pedestrian.cfg --weights 'yolor_csp.pt' --name yolor_csp_pedestrian --hyp data/hyp.scratch.640.yaml --epochs 300 --multi-scale
 ```
 
+#### Testing:
+
 ```
-# yolor_p6
+python yolor/test.py --img 640 --conf 0.001 --batch 8 --device 0 --data data/pedestrian.yaml --names data/pedestrian.names --cfg cfg/yolor_csp_pedestrian.cfg --weights weights/yolor_csp.pt
+```
+
+| Class | Images | Targets | Precision | Recall | mAP@.5 | mAP@.5:.95 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| all | 145 | 269 | 0.919 | 0.967 | 0.977 | 0.764 |
+
+
+### YOLOR_P6 
+#### Training:
+
+```
 python yolor/train.py --device 0 --batch-size 4 --img 1280 1280 --data pedestrian.yaml --cfg cfg/yolor_p6_pedestrian.cfg --weights 'yolor_p6.pt' --name yolor_p6_pedestrian --hyp data/hyp.scratch.1280.yaml --epochs 300
 ```
+
+#### Testing:
+
+```
+python yolor/test.py --img 1280 --conf 0.001 --batch 8 --device 0 --data data/pedestrian.yaml --names data/pedestrian.names --cfg cfg/yolor_p6_pedestrian.cfg --weights weights/yolor_p6.pt
+```
+
+| Class | Images | Targets | Precision | Recall | mAP@.5 | mAP@.5:.95 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| all | 145 | 269 | 0.922 | 0.952 | 0.969 | 0.751 |
+
 ## Person ReID
 ### Pretrained Models & Comparison
 
@@ -119,5 +153,6 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 - [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
 - [WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
 - [layumi/Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
+
 
 
