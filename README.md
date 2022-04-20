@@ -1,4 +1,5 @@
 # 物件偵測專班 - Person ReID 專題實作
+![c1_11](https://user-images.githubusercontent.com/41776044/164142014-0709b4a2-94cc-4796-b8cf-8dce5e25b5f0.jpg)
 
 ## Motivation
 我們想在不同攝影機間找到對應的目標對象，進而做到更多事情，例如：
