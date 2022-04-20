@@ -109,9 +109,9 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 | YOLOR-CSP | ResNet-50 (Cosine) | Own Dataset | 640 | 62.04% | 72.47% | 69.45% |
 | YOLOR-CSP | PCB | Market1501 | 640 | 74.39% | 89.57% | 83.79% |
 | YOLOR-CSP | Swin (all tricks+Circle) | Market1501 | 640 | 74.10% | 88.86% | 83.49% |
-| YOLOR-P6 | ResNet-50 (Cosine) | Own Dataset | 1280 | 79.84% | 79.84% | 79.84% |
-| YOLOR-P6 | PCB | Market1501 | 1280 | 79.84% | 79.84% | 79.84% | 
-| YOLOR-P6 | Swin (all tricks+Circle) | Market1501 | 1280 | 79.84% | 79.84% | 79.84% |
+| YOLOR-P6 | ResNet-50 (Cosine) | Own Dataset | 1280 | 60.38% | 69.66% | 65.96% |
+| YOLOR-P6 | PCB | Market1501 | 1280 | 74.17% | 87.52% | 82.12% | 
+| YOLOR-P6 | Swin (all tricks+Circle) | Market1501 | 1280 | 74.09% | 87.61% | 81.79% |
 
 
 ## Reference
@@ -119,4 +119,5 @@ python train.py --use_swin --name swin_p0.5_circle_w5 --erasing_p 0.5 --circle -
 - [WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-large)
 - [WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
 - [layumi/Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
+
 
